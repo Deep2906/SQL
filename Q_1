@@ -1,4 +1,4 @@
-Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+Q_1) Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
 
 Input Format
 
@@ -8,3 +8,16 @@ The STATION table is described as follows:
 Solution:
 SELECT DISTINCT(City) FROM STATION
 WHERE City RLIKE "^[aieou]"
+
+
+Q_2) Query the list of CITY names ending with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+
+Solution:
+SELECT DISTINCT CITY FROM STATION WHERE LOWER(SUBSTR(CITY,LENGTH(CITY),1)) IN ('a','e','i','o','u');
+
+Q_3) 
